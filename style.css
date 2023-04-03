@@ -1,7 +1,7 @@
 :root {
-  --primary-color: #292929;
-  --text-color: #F1F1F1;
-  --background-color: #121212;
+  --primary-color: #FC766AFF;
+  --text-color: #F1AC88FF;
+  --background-color: #783937FF;
   --font-family: 'Times New Roman', serif;
 }
 
@@ -26,7 +26,7 @@ header {
   align-items: center;
   padding: 2rem;
   background-color: var(--primary-color);
-  color: var(--text-color);
+  color: var(--background-color);
 }
 
 nav ul {
@@ -41,7 +41,7 @@ nav li {
 }
 
 nav a {
-  color: var(--text-color);
+  color: var(--background-color);
   text-decoration: none;
   font-size: 1.4rem;
   font-weight: bold;
@@ -54,9 +54,15 @@ nav a:hover {
 
 h1, h2, h3 {
   font-weight: bold;
-  color: var(--text-color);
+  color: var(--background-color);
   text-align: center;
   margin-top: 0;
+}
+
+section:nth-of-type(even) h1,
+section:nth-of-type(even) h2,
+section:nth-of-type(even) h3 {
+  color: var(--text-color);
 }
 
 h1 {
@@ -83,7 +89,7 @@ p {
 section {
   padding: 5rem;
   background-color: var(--primary-color);
-  color: var(--text-color);
+  color: var(--background-color);
   margin-bottom: 5rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   border-radius: 2rem;
@@ -112,12 +118,12 @@ footer {
   padding: 2rem;
   text-align: center;
   background-color: var(--primary-color);
-  color: var(--text-color);
+  color: var(--background-color);
 }
 
 button {
   background-color: var(--primary-color);
-  color: var(--text-color);
+  color: var(--background-color);
   border: none;
   padding: 1rem 2rem;
   font-size: 1.5rem;
@@ -132,7 +138,7 @@ button:hover {
 }
 
 a {
-  color: var(--text-color);
+  color: var(--background-color);
 }
 
 /* Scrollbar */
@@ -140,6 +146,39 @@ a {
   width: 10px;
   background-color: var(--primary-color);
 }
+
 ::-webkit-scrollbar-thumb {
   background-color: var(--background-color);
+}
+
+.about-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.profile-image-container {
+  flex: 0 0 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  position: relative;
+}
+
+.profile-image-container img {
+  max-width: 35%;
+  height: auto;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.about-text {
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
