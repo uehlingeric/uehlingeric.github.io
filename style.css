@@ -1,0 +1,184 @@
+:root {
+  --primary-color: #FC766AFF;
+  --text-color: #F1AC88FF;
+  --background-color: #783937FF;
+  --font-family: 'Times New Roman', serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: 16px;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  background-color: var(--primary-color);
+  color: var(--background-color);
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+  margin-right: 2rem;
+}
+
+nav a {
+  color: var(--background-color);
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  color: #cccccc;
+}
+
+h1, h2, h3 {
+  font-weight: bold;
+  color: var(--background-color);
+  text-align: center;
+  margin-top: 0;
+}
+
+section:nth-of-type(even) h1,
+section:nth-of-type(even) h2,
+section:nth-of-type(even) h3 {
+  color: var(--text-color);
+}
+
+h1 {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+section {
+  padding: 5rem;
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  margin-bottom: 5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 2rem;
+  transition: all 0.3s ease;
+}
+
+section:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+section:nth-of-type(even) {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+ul {
+  margin-left: 3rem;
+}
+
+li {
+  margin-bottom: 1rem;
+}
+
+footer {
+  padding: 2rem;
+  text-align: center;
+  background-color: var(--primary-color);
+  color: var(--background-color);
+}
+
+button {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #666666;
+}
+
+a {
+  color: var(--background-color);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: var(--primary-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--background-color);
+}
+
+.about-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.profile-image-container {
+  flex: 0 0 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  position: relative;
+}
+
+.profile-image-container img {
+  max-width: 35%;
+  height: auto;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.about-text {
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
